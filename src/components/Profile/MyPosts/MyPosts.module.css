@@ -1,0 +1,16 @@
+.postsBlock{
+    padding: 10px;
+}
+
+.posts{
+    margin-top: 10px;
+}
+
+h3 {
+    color:  #545454;
+}
+
+.textarea {
+    width: 600px;
+    height: 80px;
+}

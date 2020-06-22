@@ -1,0 +1,39 @@
+.app-wrapper {
+  margin: 0 auto;
+  display: grid;
+  width: 1200px;
+  grid-template-areas: 
+  'header header'
+  'nav content';
+  grid-template-rows: 60px 1fr;
+  grid-template-columns: 2fr 10fr;
+  grid-gap: 10px;
+}
+
+.app-wrapper-content {
+    grid-area: content;
+    background-color: white;
+    }
+
+.app-wrapper-content button {
+  width: 95px;
+  height: 25px;
+  background: #44535e;
+  color: #d9ebe9;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 5px;
+  border-color: #44535e;
+  border-style: solid;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.app-wrapper-content button:disabled {
+  background-color: #a9bbb9;
+  color: #6a7780;
+  border-color: #a9bbb9;
+}
+

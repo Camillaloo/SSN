@@ -1,0 +1,27 @@
+.header {
+  display: inline-block;
+    grid-area: header;
+    background: linear-gradient(90deg, #0e1821, #d9ebe9) ;
+    border-radius: 15px;
+    vertical-align: center;
+  }
+  
+.logo {
+    float: left;
+    margin-left: 30px;
+    font-size: 37px;
+    font-weight: 800;
+    font-stretch: expanded;
+    color: white;
+  }
+
+.loginBlock {
+    float: right;
+    padding-top: 15px;
+    padding-right: 50px;
+  }
+
+.loginBlock a {
+    float: right;
+    color: black;
+  }

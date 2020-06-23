@@ -3,6 +3,8 @@ import { connect } from 'react-redux'
 import Users from './Users'
 import { follow, unfollow, setCurrentPage, toggleFollowingProgress, getUsers } from '../../redux/users-reducer'
 import Preloader from '../common/preloader/preloader'
+import { compose } from 'redux'
+import { withAuthRedirect } from '../../hoc/withAuthRedirect'
 
 class UsersContainer extends React.Component {
     componentDidMount() {
@@ -38,33 +40,10 @@ let mapStateToProps = (state) => {
     }
 }
 
-// let mapDispatchToProps = (dispatch) => {
-//     return {
-//         follow: (userId) => {
-//             dispatch(followAC(userId))
-//         },
-//         unfollow: (userId) => {
-//             dispatch(unfollowAC(userId))
-//         },
-//         setUsers: (users) => {
-//             dispatch(setUsersAC(users))
-//         },
-//         setCurrentPage: (pageNumber) => {
-//             dispatch(setCurrentPageAC(pageNumber))
-//         },
-//         setTotalUsersCount: (totalCount) => {
-//             dispatch(setTotalUsersCountAC(totalCount))
-//         },
-//         toggleIsFetching: (isFetching) => {
-//             dispatch(toggleIsFetchingAC(isFetching))
-//         }
-//     }
-// }
-
-
-//second parameter of connect is object instead of function mapDispatchToProps to reduce # of lines
-// if property and value names are same, value name can be dismissed
-export default connect(mapStateToProps, {
-    follow, unfollow, setCurrentPage, 
-    toggleFollowingProgress,
-    getUsers})(UsersContainer)
+export default compose (
+    withAuthRedirect,
+    connect(mapStateToProps,
+        {follow, unfollow, setCurrentPage, 
+        toggleFollowingProgress, getUsers}
+    )
+)(UsersContainer)

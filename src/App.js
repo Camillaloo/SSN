@@ -4,16 +4,16 @@ import NavBar from "./components/NavBar/NavBar";
 import News from "./components/News/News";
 import Music from "./components/Music/Music";
 import Settings from "./components/Settings/Settings";
-import { Route, withRouter } from "react-router-dom";
 import DialogsContainer from "./components/Dialogs/DialogsContainer";
 import UsersContainer from "./components/users/UsersContainer";
 import ProfileContainer from "./components/Profile/ProfileContainer";
 import HeaderContainer from "./components/Header/HeaderContainer";
 import Login from "./components/Login/Login";
+import Preloader from "./components/common/preloader/preloader";
+import { Route, withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import { compose } from "redux";
 import {initializeApp} from './redux/app-reducer'
-import Preloader from "./components/common/preloader/preloader";
 
 class App extends Component {
   componentDidMount() {

@@ -103,7 +103,7 @@ export const follow = (userId) => {
 
 export const unfollow = (userId) => {
   return async (dispatch) => {
-    followUnfollowFlow(dispatch, userId, usersAPI.follow.bind(usersAPI), followSuccess);
+    followUnfollowFlow(dispatch, userId, usersAPI.unfollow.bind(usersAPI), unfollowSuccess);
   };
 };
 

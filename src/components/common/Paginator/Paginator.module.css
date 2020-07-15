@@ -8,6 +8,7 @@
 
 .selectedPage {
     font-weight: bold;
+    color: tomato;
 }
 
 .paginator button {
@@ -18,7 +19,9 @@
 }
 
 .paginator span {
-    border-color: white;
+    border-color: #d9ebe9;
     margin: 2px;
     text-decoration: #44535e;
+    font-family: monospace;
+    border-radius: 3px;
 }

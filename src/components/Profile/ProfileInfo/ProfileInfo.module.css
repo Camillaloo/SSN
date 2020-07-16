@@ -1,11 +1,33 @@
+/* .clearfix:after{
+    content: "";
+    display: table;
+    width: 100%;
+    clear: both;
+} */
+
 .descriptionBlock {
     padding: 10px;
 }
 
-.descriptionBlock img {
+.descriptionBlock input {
     display: block;
     margin-bottom: 10px;
 }
+
+.descriptionBlock img {
+    float: left;
+}
+
 .contact {
     padding-left: 10px;
+}
+
+div{
+    box-sizing: border-box;
+}
+
+.profileInfo {
+    display: inline-end;
+    float: left;
+    margin-left: 30px;
 }
